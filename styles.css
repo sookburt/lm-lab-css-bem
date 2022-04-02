@@ -3,8 +3,8 @@
     --light: #D8C8AE; /* #FFFFFF; */
     --dark: #242C49; /* #000000; */
     --mid: #CCCCCC;
-    --success: green;
-    --danger: red;
+    --success: #AFE1AF;
+    --danger:   #a93226;
 }
 
 html {
@@ -23,7 +23,8 @@ html {
     margin: auto;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 20px 20px;
 }
 
 .card {
@@ -80,9 +81,9 @@ html {
 }
 
 .card__button--danger {
-    border: solid 1px var(--dark);
+    border: solid 1px var(--light);
     background-color: var(--danger);
-    color: var(--dark);
+    color: var(--light);
 }
 .card__button--danger::after {
     content: " 🔥 DANGER!";
