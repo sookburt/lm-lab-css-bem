@@ -1,0 +1,114 @@
+@charset "UTF-8";
+html {
+  font-size: 100%;
+}
+
+.body__heading {
+  font-size: 3rem;
+  text-align: center;
+  color: #242C49;
+}
+
+.container {
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 20px 20px;
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.card {
+  border: solid #CCCCCC 2px;
+  padding: 20px;
+  margin: 10px;
+  min-width: 220px;
+  border-radius: 10px;
+  -webkit-box-shadow: 10px 10px 5px #CCCCCC;
+          box-shadow: 10px 10px 5px #CCCCCC;
+  text-align: center;
+}
+
+.card__heading {
+  font-size: 2rem;
+  text-align: left;
+  margin: 10px;
+}
+
+.card__image {
+  max-width: 200px;
+}
+
+.card__body {
+  text-align: left;
+  max-width: 200px;
+  margin: 10px;
+}
+
+.card__button {
+  padding: 12px;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+.card__button--success {
+  /* skin */
+  border: solid 1px #242C49;
+  background-color: #AFE1AF;
+  color: #242C49;
+}
+
+.card__button--success:after {
+  /* skin */
+  content: " 👼 RELAX...";
+}
+
+.card__button--danger {
+  /* skin */
+  border: solid 1px #D8C8AE;
+  background-color: #a93226;
+  color: #D8C8AE;
+}
+
+.card__button--danger:after {
+  /* skin */
+  content: " 🔥 DANGER!";
+}
+
+.card--light {
+  /* skin */
+  background-color: #D8C8AE;
+  border-color: #D8C8AE;
+  color: #242C49;
+}
+
+.card--dark {
+  /* skin */
+  background-color: #242C49;
+  border-color: #242C49;
+  color: #D8C8AE;
+}
+/*# sourceMappingURL=main.css.map */

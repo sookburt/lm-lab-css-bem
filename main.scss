@@ -1,0 +1,99 @@
+@import './variables';
+
+@mixin mobile {
+  @media only screen and (max-width: $mobile) {
+    @content;
+  }
+}
+
+html {
+  font-size: 100%;
+}
+
+.body__heading {
+  font-size: 3rem;
+  text-align: center;
+  color: $dark;
+}
+
+.container {
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px 20px;
+
+  @include mobile {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;  
+  }
+}
+
+.card {
+  border: solid $mid 2px;
+  padding: 20px;
+  margin: 10px;
+  min-width: 220px;
+  border-radius: 10px;
+  box-shadow: 10px 10px 5px $mid;
+  text-align: center;
+
+  &__heading {
+    font-size: 2rem;
+    text-align: left;
+    margin: 10px;
+  }
+
+  &__image {
+    max-width: 200px;
+  }
+
+  &__body {
+    text-align: left;
+    max-width: 200px;
+    margin: 10px;
+  }
+
+  &__button {
+    padding: 12px;
+    margin: 5px;
+    border-radius: 5px;
+
+    
+    &--success { /* skin */
+      border: solid 1px $dark;
+      background-color: $success;
+      color: $dark;
+
+      &:after { /* skin */
+        content: " 👼 RELAX...";
+      }
+    }
+    
+    &--danger { /* skin */
+      border: solid 1px $light;
+      background-color: $danger;
+      color: $light;
+
+      &:after { /* skin */
+        content: " 🔥 DANGER!";
+      }
+    }
+  }
+  
+  &--light{ /* skin */
+    background-color:$light;
+    border-color: $light;
+    color: $dark;
+  }
+
+  &--dark { /* skin */
+    background-color: $dark;
+    border-color: $dark;
+    color: $light;
+  }
+
+}
+
